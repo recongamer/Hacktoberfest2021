@@ -44,17 +44,7 @@
 ##
 
 #### Now you just have to repeat the steps 4 to 8 for 3 more times with different programs in order to be eligible for a free T-shirt👕 and stickers🤩.
-##
-## <div align="center">🔄Tracking your Progress🚧:-</div>
-  
-  ### 1. Go to https://hacktoberfest.digitalocean.com/login and Sign in with GitHub.
-  ![](https://i.ibb.co/Ss7DhJk/login.jpg)
-  <br></br>
-##
-  ### 2. You will see a bar🔋 on the top right telling your progress.🤩🤩
-  ![](https://i.ibb.co/4p6yWd5/progress.jpg)
-  <br></br>
-##
+
 
 ## <div align="center">Note:-</div>
 
