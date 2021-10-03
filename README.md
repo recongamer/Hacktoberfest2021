@@ -34,16 +34,7 @@
 ##
   ### 7. On the next window, click on the "*Pull Request*"✔️ button.
   ![](https://i.ibb.co/LxW7q9F/pull.jpg)
-<br></br>
-##
-  ### 8. Click on the *"Create Pull Request Button"*✔️.
-  ![](https://i.ibb.co/17YNgMw/pr-LI.jpg)
-  ##
-  ### And again on the same button on the next window.
-  ![](https://i.ibb.co/m95QGHK/request.jpg)
-<br></br>
-##
-  ### 9. Follow me on GitHub @ https://github.com/recongamer to know more about my works.👨‍💻
+ ### 9. Follow me on GitHub @ https://github.com/recongamer to know more about my works.👨‍💻
   ![](https://i.ibb.co/QbZkVNx/follow-LI.jpg)
 <br></br>
 ##
