@@ -52,6 +52,7 @@
 #### 2. Codes like 'helloworld', 'sum of 2 nos.', etc won't be accepted.😔
 #### 3. Deadline is 31st October.
 #### 4. I will personally check each code and if I find any code not following the rules, then his/her Pull Request will be marked as invalid and it won't be counted.😥
+#### 5. I may not be active all the time , you can ping me on whatsapp at 6202316802 if you need help. 
 
 
 
