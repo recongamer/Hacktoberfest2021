@@ -19,7 +19,7 @@ void bubbleSort(int arr[], int n)
             }
 }
 
-void show(int arr[], int arr_size)
+void show(int arr[], int arr_size)        //to display array elements
 {
     int i;
     for (i = 0; i < arr_size; i++)
@@ -29,7 +29,7 @@ void show(int arr[], int arr_size)
 
 int main()
 {
-    int n;
+    int n;            //size of array
    cout << "Enter the number of elements: ";
    cin >> n;
    int arr[n];           
