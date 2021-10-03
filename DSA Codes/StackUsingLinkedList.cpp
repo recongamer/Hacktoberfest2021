@@ -1,3 +1,14 @@
+/* Problem Statement : Implement Stack using Linked List 
+    Linked List is considered as memory efficient implementation Data Structure.
+    Stack is one of the Data Structure used is many applications.
+    Implementing Stack using linked list is considered to be efficient.
+
+    Approach : 
+        Operations of Stack Push,Pop,top,isEmpty has been implemented using Linked List
+        Push operation : Same as insert at beginning of Singly linked list.
+        Pop operation : same as delete from end of singly linked list 
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 struct Node
@@ -16,7 +27,6 @@ struct Stack
 {
     node head;
     int size;
-
     Stack()
     {
         head = NULL;
@@ -70,14 +80,14 @@ int main()
 {
     Stack s;
     // do the operations
-    // s.push(10) 
-    // s.push(20) 
-    // s.push(30) 
-    // s.push(40) 
-    // s.push(50)
-    // s.pop()
-    // s.top()
-    //s.isEmpty() 
+    // s.push(10); 
+    // s.push(20) ;
+    // s.push(30) ;
+    // s.push(40) ;
+    // s.push(50);
+    // s.pop();
+    // s.top();
+    //s.isEmpty() ;
     node temp = s.head;
     while (temp != NULL)
     {
