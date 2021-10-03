@@ -6,7 +6,7 @@ void swapping(int &p, int &q) {
    p = q;
    q = temp;
 }
-void display(int *a, int size) {
+void display(int *a, int size) {      //to display array elements
    for(int i = 0; i<size; i++)
       cout << a[i] << " ";
    cout << "\n";
@@ -23,7 +23,7 @@ void selectionSort(int *a, int size) {
    }
 }
 int main() {
-   int n;
+   int n;           //size of array
    cout << "Enter the number of elements: ";
    cin >> n;
    int arr[n];           
