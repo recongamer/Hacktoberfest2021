@@ -12,7 +12,7 @@
 ![](https://i.ibb.co/L1ksc1B/aaa.jpg)
 <br></br>
 ##
-  ### 2. Go to https://hacktoberfest.digitalocean.com and sign up for a new profile by providing authentication with Github.(It's   very     easy, just follow the steps)
+  ### 2. Go to https://hacktoberfest.digitalocean.com and sign up for a new profile by providing authentication with Github.(It's very easy, just follow these steps)
   ![](https://i.ibb.co/0jHpjBP/hacktoberfest.jpg)
 <br></br>
 ##
@@ -20,7 +20,7 @@
   ![](https://i.ibb.co/R4p91T9/fork1.jpg)
 <br></br>
 ##
-  ### 4. Now click on the "*Programs*" folder and click on "*new file*"📁.
+  ### 4. click on the "*Programs*" folder and click on "*new file*"📁.
   ![](https://i.ibb.co/PGymWWZ/1-0-2-Git-create-file.png)
 <br></br>
 ##
