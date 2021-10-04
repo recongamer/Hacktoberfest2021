@@ -13,7 +13,7 @@
 <br></br>
 ##
   ### 2. Go to https://hacktoberfest.digitalocean.com and sign up for a new profile by providing authentication with Github.(It's   very     easy, just follow the steps)
-  ![](https://i.ibb.co/0jHpjBP/hacktoberfest.jpg)
+  
 <br></br>
 ##
   ### 3. Then go to https://github.com/recongamer/Hacktoberfest2021 and click on *"star"*🌟 and *"fork"*🍴.
