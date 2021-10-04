@@ -25,17 +25,17 @@
 <br></br>
 ##
   ### 5. Type the name of the code with the proper extensions and then type the code⌨️ in the given area. For eg.- prime.py
-  ![](https://i.ibb.co/sm8k4FY/Capture.png)
+  
 <br></br>
 ##
   ### 6. Go to the bottom of the page and click on the "*Commit changes*"✔️ button.
-  ![](https://i.ibb.co/QQmwywM/commit.jpg)
+  
 <br></br>
 ##
   ### 7. On the next window, click on the "*Pull Request*"✔️ button.
-  ![](https://i.ibb.co/LxW7q9F/pull.jpg)
+ 
  ### 9. Follow me on GitHub @ https://github.com/recongamer to know more about my works.👨‍💻
-  ![](https://i.ibb.co/QbZkVNx/follow-LI.jpg)
+  
 <br></br>
 ##
 
