@@ -1,52 +1,26 @@
-//  this is one of the best way to search element in any array we also have linear search method but binary search have less time complexity as compare to linear search so we use this method to search elements in element
-
-#include <iostream>
+#include<iostream>
+#include<cstdio>
+#include<cmath>
 using namespace std;
-
-int binarysearch(int arr[], int n, int num)
-{
-    int start = 0; //assigning starting point
-    int end = n;   //assigning ending point
-    while (start <= end)
-    {
-        int middle = (start + end) / 2;
-
-        if (arr[middle] == num)
-        {
-            return middle;
-        }
-        else if (arr[middle] < num)
-        {
-            start = middle + 1;
-        }
-        else
-        {
-            end = middle - 1;
-        }
-    }
-    return -1;
+int rec_binary_search(int arr[], int left, int right, int x) {
+  int result;
+  if (right >= left) {
+    int mid = left + (right - left)/2;
+    if (arr[mid] == x)  return mid;
+    if (arr[mid] > x) return rec_binary_search(arr, left, mid-1, x);
+    result = rec_binary_search(arr, mid+1, right, x);
+    return result;
+  }
+  return -1;       // when element is not present in array.
 }
 
-int main()
-{
-    int n; // size of array
-    cin >> n;
-    int arr[n]; //decleration of array
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i]; //input elements in array
-    }
-    int num = 0;
-    cout << "Enter number you want to search: ";
-    cin >> num; // taking input of searching element
-    int pos = binarysearch(arr, n, num);
-    if (pos == -1)
-    {
-        cout << "Element not found in array" << endl;
-    }
-    else
-    {
-        cout << pos << endl;
-    }
-    return 0;
+int main() {
+  int loc,x,array[]={10,11,12,13,14,25,26,37,48,59};
+  x=11;        // element to be searched in the array
+  loc=rec_binary_search(array,0,10,x);
+  if(loc != -1)
+    cout<<"Element found at location : "<<loc;
+  else
+    cout<<"Element not present in the array.";
+  return 0;
 }
