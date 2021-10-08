@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+#include<vector>
+using namespace std;
+
+vector<string> getMazeHelper(int sr, int sc, int dr, int dc, vector<string> output){
+    //Base case 1
+    if(sr > dr || sc > dc){
+         vector<string> ans;
+          return ans;
+    }
+    //Base case 2
+    if(sr == dr && sc == dc){
+        vector<string> ans;
+        ans.push_back("");
+        return ans;
+    }
+    
+    //recursive calls
+    vector<string> ans1 = getMazeHelper(sr, sc+1, dr, dc, output);
+    vector<string> ans2 = getMazeHelper(sr+1, sc, dr, dc, output);
+   
+    //my calculations
+    for(int i = 0; i < ans1.size(); i++){
+        output.push_back('h'+ans1[i]);
+    }
+     for(int i = 0; i < ans2.size(); i++){
+        output.push_back('v'+ans2[i]);
+     }
+    
+    //returning the ans
+    return output;
+}
+vector <string> getMazePaths(int sr, int sc, int dr, int dc) {
+    vector<string> output;
+    return getMazeHelper(sr, sc, dr, dc, output);
+}
+
+int main() {
+    //n represents number of rows and m represents number of columns
+    int n,m; 
+    cin >> n >> m;
+    //calling the function to get maze path
+    vector<string> ans = getMazePaths(0,0,n-1,m-1);
+    for(auto i: ans){
+        cout << i << ", ";
+    }
+    return 0;
+}
