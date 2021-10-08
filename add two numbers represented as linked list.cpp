@@ -13,25 +13,14 @@ struct ListNode {
   ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-ListNode* newNode(int data)
-{
-    ListNode* new_node = new ListNode();
-    new_node->val = data;
-    new_node->next = NULL;
-    return new_node;
-}
 
-/* Function to insert a node at the beginning of the Singly Linked List */
+/* insert a node at the beginning */
 void push(ListNode** head_ref, int new_data)
 {
     /* allocate node */
-    ListNode* new_node = newNode(new_data);
- 
-    /* link the old list off the new node */
-    new_node->next = (*head_ref);
- 
-    /* move the head to point to the new node */
-    (*head_ref) = new_node;
+    ListNode* dummy = new ListNode(new_data);
+    dummy->next = (*head_ref);
+    (*head_ref) = new_node;  //making this node as head
 }
 
 //function to add the linked list values
@@ -39,14 +28,15 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* temp1=l1,*temp2=l2;
         ListNode* head=NULL,*tail=NULL;
         
-        int sum=temp1->val+temp2->val;
-        int rem=sum%10;
-        int carry=sum/10;
+        int sum = temp1->val + temp2->val;
+        int rem = sum%10;
+        int carry = sum/10;
         
         head=tail=new ListNode(rem);
   
         temp1=temp1->next;
         temp2=temp2->next;
+        //until either of the lists are not empty
         while(temp1!=NULL ||  temp2!=NULL){
             int a = (temp1) ? temp1->val : 0;
             int b = (temp2) ? temp2->val : 0;
@@ -61,6 +51,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
             if(temp2)
                 temp2=temp2->next;
         }
+         //if carry is not empty till now add its values as nodes of linked list
         while(carry)
         {
             tail->next=new ListNode(carry%10);
@@ -69,29 +60,29 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         }
         return head;
 }
+//iterative function for reversing the linked list
+ListNode* reverse(ListNode* head) {
+        ListNode* current = head;
+        ListNode* prev = NULL;
+        ListNode* next = NULL;
+        while(current!=NULL)
+        {
+            next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+}
 
-//function to reverse the list
-ListNode* reverse(ListNode* head)
-{
-    if (head == NULL || head->next == NULL)
-        return head;
- 
-    /* reverse the rest list and put the first element at the end */
-    ListNode* rest = reverse(head->next);
-    head->next->next = head;
- 
-    head->next = NULL;
- 
-    /* fix the head pointer */
-    return rest;
-}  
 
 //print the list
-void printList(ListNode* node)
+void print(ListNode* head)
 {
-    while (node != NULL) {
-        cout << node->val << " ";
-        node = node->next;
+    ListNode* temp=head;
+    while (temp != NULL) {
+        cout << temp->val << " ";
+        temp = temp->next;
     }
     cout << endl;
 }
@@ -100,35 +91,35 @@ void printList(ListNode* node)
 /* Driver code */
 int main()
 {
-    ListNode* res = NULL;
-    ListNode* first = NULL;
-    ListNode* second = NULL;
+    ListNode* result = NULL;
+    ListNode* firstList = NULL;
+    ListNode* secondList = NULL;
  
-    // create first list 7->5->9->4->6
-    push(&first, 6);
-    push(&first, 4);
-    push(&first, 9);
-    push(&first, 5);
-    push(&first, 7);
+    // create first list 
+    push(&firstList, 1);
+    push(&firstList, 1);
+    push(&firstList, 9);
+    push(&firstList, 7);
+    push(&firstList, 3);
     printf("First List is ");
-    printList(first);
- 
-    // create second list 8->4
-    push(&second, 4);
-    push(&second, 8);
+    printList(firstList);
+  
+    // create second list 
+    push(&secondList, 4);
+    push(&secondList, 8);
     cout << "Second List is ";
-    printList(second);
+    printList(secondList);
  
     // reverse both the lists
-    first = reverse(first);
-    second = reverse(second);
+    firstList = reverse(firstList);
+    secondList = reverse(secondList);
     // Add the two lists
-    res = addTwoNumbers(first, second);
+    result = addTwoNumbers(firstList, secondList);
  
     // reverse the res to get the sum
-    res = reverse(res);
+    result = reverse(result);
     cout << "Resultant list is ";
-    printList(res);
+    printList(result);
  
     return 0;
 }
