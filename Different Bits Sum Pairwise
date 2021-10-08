@@ -1,0 +1,35 @@
+// Q. Given an array of integers A, every element appears twice except for one. Find that single one.
+// InterviewBit question from Bit Manipulation section
+
+
+// O(n) time complexity and O(1) auxiliary space solution
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // n is the size of the array
+    int n;    cin>>n;
+    
+    // taking input of array of size n
+    int arr[n];
+    for(int i=0;i<n;i++) cin>>arr[i];
+    
+    // ^ represents bitwise xor
+    // x is any number 
+    // x ^ 0 = x
+    // x ^ x = 0
+    // numbers appearing twice in the array will become zero when their xor is taken while
+    // traversing the array
+    // onle number left in the res variable will be the number appearing only once
+    // hence res is the answer
+    
+    int res=0;
+    for(int i=0;i<n;i++)
+    {
+        res=res^A[i];
+    }
+    cout<<res;
+    return 0;
+}
