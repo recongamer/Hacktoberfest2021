@@ -17,3 +17,15 @@ public:
         return i + 1;                    // return size of new array
     }
 };
+
+// 2nd way
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+       
+     auto it =  unique(nums.begin(),nums.end());
+     nums.resize(distance(nums.begin(),it));
+     return nums.size();
+        
+    }
+};
