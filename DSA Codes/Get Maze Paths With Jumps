@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<string> getMazePathJumps(int sr, int sc, int dr, int dc){
+    //Base case
+    if(sr > dr || sc > dc){
+       vector<string> ans;
+        return ans;
+    }
+    
+    if(sr == dr && sc == dc){
+        vector<string> ans;
+        ans.push_back("");
+        return ans;
+    }
+    
+      vector<string> output;
+    //horizontal moves
+    for(int ms = 1; ms <= (dc-sc); ms++){
+        vector<string> ans1 = getMazePathJumps(sr, sc+ms, dr, dc);
+        for(auto i: ans1){
+            output.push_back("h"+to_string(ms)+i);
+        }
+    }
+    
+    //vertical moves
+     for(int ms = 1; ms <= (dr-sr); ms++){
+        vector<string> ans2 = getMazePathJumps(sr+ms, sc, dr, dc);
+        for(auto i: ans2){
+            output.push_back("v"+to_string(ms)+i);
+        }
+    }
+    
+    //diagonal moves
+     for(int ms = 1; (ms <= (dc-sc) && ms <= (dr-sr)); ms++){
+        vector<string> ans3 = getMazePathJumps(sr+ms, sc+ms, dr, dc);
+        for(auto i: ans3){
+            output.push_back("d"+to_string(ms)+i);
+        }
+     }
+    return output;
+}
+
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+
+    vector<string> ans = getMazePathJumps(0, 0, n-1, m-1);
+    int count = ans.size();
+    cout << "[";
+    for(auto i: ans){
+        if(count == 1){
+            cout << i;
+        }
+        else{
+            cout << i << ", ";
+        }
+        count--;
+    }
+    cout << "]";
+    return 0;
+}
