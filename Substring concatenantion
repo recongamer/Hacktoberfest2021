@@ -1,0 +1,37 @@
+
+
+vector<int> Solution::findSubstring(string a, const vector<string> &B) {
+
+
+map<string,int> word;
+for(auto i:B)
+word[i]++;
+
+int n=a.length();
+int b=B.size();
+int l=B[0].length();
+
+vector<int> ans;
+for(int i=0;i<n-b*l+1;i++)
+{
+    map<string,int> str;
+    int j;
+    for(j=0;j<b;j++)
+    {
+        string sub=a.substr(i+j*l,l);
+        if(word.find(sub)!=word.end())
+        {
+            str[sub]++;
+            if(str[sub]>word[sub])
+                break;
+        }
+        else
+            break;
+    }
+    
+    if(j==b)
+        ans.push_back(i);
+}
+return ans;
+
+}
