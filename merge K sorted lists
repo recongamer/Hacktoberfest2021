@@ -1,0 +1,50 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+ 
+ 
+ 
+struct Compare
+{
+    bool operator()(ListNode* a, ListNode* b)
+    {
+        return a->val > b->val;
+    }
+};
+
+ListNode* Solution::mergeKLists(vector<ListNode*> &A) {
+    if (A.empty())
+        return NULL;
+    
+    ListNode* ans = new ListNode(0);
+    ListNode* L = ans;
+    
+    //Compare will sort on the basis of first element of each List vector in ascending order 
+    priority_queue<ListNode*, vector<ListNode*>, Compare> q;
+    
+    for (int i = 0; i<A.size(); i++)
+    {
+        if (A[i])
+            q.push(A[i]);
+    }
+    
+    while (!q.empty())
+    {   
+        //take the first element; in beginning as vectors are sorted in asc order based on first element, top will be the least of leasts(starting of each vector is the least)
+        L->next = q.top();
+        q.pop();
+        L= L->next;
+        
+        //if L->next 
+        //bcs we need to sort all the ListNodes in ascending order hence we push each of it if it exists
+        if (L->next)
+            q.push(L->next);
+    }
+    return ans->next;
+}
+ 
