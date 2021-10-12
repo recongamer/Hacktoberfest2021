@@ -1,0 +1,21 @@
+vector<int> Solution::solve(vector<int> &A, int B) {
+    
+    priority_queue<int> pq;
+    int n=A.size();
+    
+    for(int i=0;i<n;i++){
+        
+        pq.push(A[i]);
+        
+        
+    }
+    vector<int> v(B,0);
+    
+    for(int i=0;i<B;i++){
+        
+        v[i]=pq.top();
+        pq.pop();
+        
+    }
+    return v;
+}
