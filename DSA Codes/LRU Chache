@@ -1,0 +1,43 @@
+int limit;
+int c;
+map<int,int> mp;
+map<int,int> num;
+LRUCache::LRUCache(int capacity) {
+mp.clear();
+num.clear();
+limit=capacity;
+c=0;
+}
+
+int LRUCache::get(int key) {
+if(mp.find(key)==mp.end())
+return -1;
+num[key]=++c;
+return mp[key];
+}
+
+void LRUCache::set(int key, int value) {
+if(mp.find(key)==mp.end()){
+if(mp.size()==limit){
+    
+int tempkey,min=INT_MAX;
+for(auto it=num.begin();it!=num.end();it++){
+if(it->second<min){
+min=it->second;
+tempkey=it->first;
+}
+}
+mp.erase(tempkey);
+num.erase(tempkey);
+}
+
+mp[key]=value;
+num[key]=++c;
+
+}
+
+else{
+    mp[key]=value;
+    num[key]=++c;
+}
+}
