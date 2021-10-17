@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+//#include <chrono>
+//using namespace std::chrono;
+//int arr[1000]
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	for(int i=10e5;i<10e5+n;i++)
+	{
+		cout<<i<<" ";
+	}
+	cout<<endl;
+}
