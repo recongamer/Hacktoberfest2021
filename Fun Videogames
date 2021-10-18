@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-family: arial;
+      }
+      h2 {
+        text-align: center;
+        color: red;
+        font-family: arial;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2 style="background-color:orange">My Top 5 Favorite Videogames!!!</h2>
+    <p style="background-color:violet">These are 5 fun games that are mostly free, some costing money but definitely worth it!</p>
+
+    <table style="width:100%">
+      <tr style="background-color:tomato";>
+        <th>Videogame</th>
+        <th>Picture</th> 
+        <th>Description</th>
+        <th>Platforms Available</th>
+      </tr>
+      <tr style="background-color:Dodgerblue">
+        <td>Valorant</td>
+        <td> <img src = https://media.wired.com/photos/5ea0840cb0490300086261e3/master/w_2560%2Cc_limit/Cul-Reveal_ReactorA_VALORANT.jpg alt = "valorant image" width=340 height=250> 
+          <p>"Cul-Reveal_ReactorA_VALORANT", Cecilia D'Anastasio, Wired.com, no creative commons license.</p>
+        </td>
+        <td style="background-color:mediumseagreen;">This first person shooting game lets you fight five enemies with your four teammates and your objective is to plant a bomb or kill all the enemies. Each agent has abilities to help your team plant the bomb, ranging from smokes, to flashes to blind the enemy team. Valorant is completely free with the exeption of in game skin purchases that elevate the gaming experience.</td>
+        <td style=background-color:violet>Currently Valorant is only available on PC.</td>
+      </tr>
+      <tr style="background-color:Dodgerblue">
+        <td>Legends of Zelda Breath of the Wild</td>
+        <td><img src=https://images.squarespace-cdn.com/content/v1/5c3de8828f5130565abe67f9/1575759187658-L4BP3MO1QMF9CDH7UJOV/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/mepn5qujlccdlkhfkwr8.png?format=1500w alt=ZeldaGameplay width=340 height=300>
+          <p>"mepn5qujlccdlkhfkwr8", Sam Hallahan, Gameoverlook.com, no cc license.
+        </td>
+        <td style="background-color:mediumseagreen;">BOTW is a sandbox style game where you control the character Link, to fight evil monsters and travel around the almost unlimited world. Even if you beat the main story line and defeat Ganon, there is still endless things to do. There are so many characters scattered across the world and secret caves to be found which is what makes this game so addicting. The one downside of this game is that it costs 60 dollars and</td>
+        <td style=background-color:violet>Nintendo Switch</td>
+      </tr>
+      <tr style="background-color:Dodgerblue">
+        <td>Mobile Legends</td>
+        <td><img src=https://play-lh.googleusercontent.com/1uWXx11LmAzgHI8_bI4lkYqLE8zJ3sJzxIf7So_vtIVDfTWTwL6HbMA2mXWBaAyPe1Xj=w412-h220-rw width=340 height= 300 alt=MobileLegends>
+          <p>"5v5 Action Gameplay", anonymous creator, play.google.com, no license</p>
+        </td>
+        <td style="background-color:mediumseagreen;">This 6v6 MOBA style game has a more cartoon style graphics and the heroes are pretty easy to learn compared to other MOBA games like League of Legends. Each hero has three or four unique abilities that they have to use to fight the oponents and take down their towers. When their final tower is destroyed, the opposite team wins.</td>
+        <td style=background-color:violet>Mobile devices (IOS and Android)</td>
+      </tr>
+      <tr style="background-color:Dodgerblue">
+        <td>Overwatch</td>
+        <td><img src=https://s.yimg.com/os/creatr-uploaded-images/2021-03/ad22b2c0-8365-11eb-8aea-cf1ddea64c43 width=340 height=300>
+          <p>"Overwatch Gameplay", Kris Holt, Forbes.com, no license</p>
+        </td>
+        <td style="background-color:mediumseagreen;">This 6v6 first person shooter game has a variety of different objectives for both teams to accomplish, ranging from moving a payload to the other side of the map and capturing an objective. Of course, you have to eliminate the enemy to make process with each hero's unique abilities. The three roles are tank, damage, and healer, each relying on each other to complete the objectives, making the game very team-based.</td>
+        <td style=background-color:violet>Xbox, Playstation, PC</td>
+      </tr>  
+      <tr style="background-color:Dodgerblue">
+        <td>Chess.com</td>
+        <td><img src=https://betacssjs.chesscomfiles.com/bundles/web/images/offline-play/standardboard.png width=340 height=300>
+          <p>I took a snip of the chess.com website board</p>
+        </td>
+        <td style="background-color:mediumseagreen;">Chess is a game as old as time that is based on strategy and Chess.com brings this game to a higher level and funner experience. The rating system makes the game especially competetive with goals of increasing your rating, as well as tournaments being hosted regularily with cash prizes. There are also many different modes that may suit people that find the regular board game boring. </td>
+        <td style=background-color:violet>PC, mobile, normal chess can be played on a board</td>
+      </tr>
+    </table>
+    <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cc-by-nc_icon.svg/1200px-Cc-by-nc_icon.svg.png alt=cc-by-nc width=200 height=100>
+  </body>
+</html>
