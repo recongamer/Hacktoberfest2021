@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Edge
+{
+public:
+	int source;
+	int neighbour;
+	int weight;
+	void add(int source, int neighbour, int weight)
+	{
+		this->source = source;
+		this->neighbour = neighbour;
+		this->weight = weight;
+	}
+};
+void topologicalSort(std::vector<Edge> v[], int source, bool *vis, stack<int>&st)
+{
+	vis[source] = true;
+	for (auto E : v[source])
+	{
+		if (vis[E.neighbour] == false)
+		{
+			topologicalSort(v, E.neighbour, vis, st);
+		}
+	}
+	st.push(source);
+}
+int main()
+{
+	int vertices;
+	cin >> vertices;
+	vector<Edge> adj[vertices];
+	int edge; cin >> edge;
+	for (int i = 0; i < edge; i++)
+	{
+		int v1, v2, weight = 1;
+		cin >> v1 >> v2;
+		Edge p1;
+		p1.add(v1, v2, weight);
+		adj[v1].push_back(p1);
+	}
+	bool vis[vertices] = {false};
+	stack<int>st;
+	for (int i = 0; i < vertices; i++)
+	{
+		if (vis[i] == false)
+		{
+			topologicalSort(adj, i, vis, st);
+		}
+	}
+	while (st.size())
+	{
+		cout << st.top() << " ";
+		st.pop();
+	}
+	return 0;
+}
