@@ -10,25 +10,38 @@
 # Average Case: O(logn)
 # Best Case: O(1) -> When key is present at the middle index.
 
-def binarySearch(sortedList, key, start, end):
-    '''Returns index of key present in the sorted list. Returns -1 if key not found.'''
-    if start <= end:
-        middleIndex = (start + end) // 2
-        middleElement = sortedList[middleIndex]
-
-        if middleElement == key:
-            return middleIndex
-        elif middleElement < key:
-            location = binarySearch(sortedList, key, middleIndex + 1, end)
+def binary_search(arr, low, high, x):
+ 
+    # Check base case
+    if high >= low:
+ 
+        mid = (high + low) // 2
+ 
+        # If element is present at the middle itself
+        if arr[mid] == x:
+            return mid
+ 
+        # If element is smaller than mid, then it can only
+        # be present in left subarray
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+ 
+        # Else the element can only be present in right subarray
         else:
-            location = binarySearch(sortedList, key, start, middleIndex - 1)
-
-        return location
-
-    return -1
-
-
-myList = [10, 25, 35, 50, 80, 100, 150, 500, 750, 999]
-target = 25
-location = binarySearch(myList, target, 0, len(myList) - 1)
-print(f'Element found at index {location}.')
+            return binary_search(arr, mid + 1, high, x)
+ 
+    else:
+        # Element is not present in the array
+        return -1
+ 
+# Test array
+arr = [ 2, 3, 4, 10, 40 ]
+x = 10
+ 
+# Function call
+result = binary_search(arr, 0, len(arr)-1, x)
+ 
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
