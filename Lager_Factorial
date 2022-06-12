@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void multiply(int n,vector<int>&v)
+{
+	int carry = 0;
+	for (int i = 0; i < v.size(); i++)
+	{
+		int pro = v[i] * n + carry;
+		v[i] = pro % 10;
+		carry = pro / 10;
+	}
+	while (carry)
+	{
+		v.push_back(carry % 10);
+		carry /= 10;
+	}
+}
+
+int main(int argc, char const *argv[])
+{
+	int n; cin >> n;
+  vector<int>v;
+	v.push_back(1);
+	for (int i = 2; i <= n; i++)
+	{
+		multiply(i,v);
+	}
+	reverse(v.begin(), v.end());
+	for (int val : v)cout << val;
+
+	cerr << "time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
+	return 0;
+}
+
+//Input1  : 5
+//Output1 : 120
+
+//Input2  : 53
+//Output2 : 4274883284060025564298013753389399649690343788366813724672000000000000
+
+
+
+
+
